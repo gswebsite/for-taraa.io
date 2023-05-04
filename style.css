@@ -1,0 +1,206 @@
+* {
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box; /* Tambahkan untuk menghindari overflow */
+}
+body {
+    background-color: #f6f6f6;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.card {
+    background: aliceblue;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    overflow: hidden;
+}
+
+p.name {
+    color: crimson;
+}
+
+.mySlides {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        height: auto;
+        padding: 2em;
+    }
+    img.birthday {
+        width: 100%;
+        max-height: unset;
+    }
+    .text {
+        padding: 0;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .card {
+        display: block;
+        height: auto;
+        padding: 2em;
+    }
+    img.birthday {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+    }
+    .text {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+img.birthday {
+    max-height: 40vh;
+    border: 2px solid wheat;
+}
+
+.text {
+    padding: 1em;
+}
+
+.muted {
+    opacity: 0.8;
+}
+
+.space {
+    height: 100px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+  
+  /* On smaller screens, decrease text size
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+.audio {
+    margin-top: 10px;
+} */
+.song-section .row p {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+    color: #555555;
+}
+.song-section .row h2 {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+    color: #555555;
+}
+p.copyright-text{
+    text-align: center;
+    font-size: 14px;
+    padding: 0 15px;
+    color: #555555;
+    padding: 20px 0;
+    border-top: 1px solid #cccccc;
+}
+
+#popup {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(71, 68, 68, 0.9);
+   z-index: 9999;
+}
+  
+.popup-content {
+  text-align: center;
+  padding: 20px;
+   background-color: white;
+   border-radius: 90px;
+}
+.popup-content p{
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+    /* text-transform: capitalize; */
+}
+.play-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #fb839e;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.play-button:hover {
+    background-color: #d4429a;
+}
+  
+/* Media Queries */
+/* Media Queries */
+@media (max-width: 768px) {
+    .popup-content {
+    border-radius: 60px;
+    }
+    
+    .popup-content p {
+    font-size: 30px;
+    }
+    
+    .play-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .popup-content {
+    border-radius: 40px;
+    }
+    
+    .popup-content p {
+    font-size: 24px;
+    }
+    
+    .play-button {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 10px;
+    }
+}
